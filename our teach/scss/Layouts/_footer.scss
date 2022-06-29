@@ -1,0 +1,115 @@
+.footer {
+  position: relative;
+  .container {
+    position: absolute;
+    top: 550px;
+    left: 350px;
+    .row {
+      @include styleText($fs-1, $fw-1, $color-white-3);
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      h1 {
+        margin-bottom: $mg-3;
+      }
+      ul {
+        list-style: none;
+        li {
+          margin-bottom: $mg-2;
+          border-bottom: 1px solid $color-dark-1;
+          padding-bottom: 10px;
+          a {
+            @include styleText($fs-1, $fw-1, $color-white-3);
+            text-decoration: none;
+            transition: all 0.3s;
+            &:hover {
+              color: rgba(255, 255, 255, 0.733);
+            }
+          }
+        }
+      }
+      .contact {
+        padding: 0px 20px;
+        span {
+          margin-top: $mg-1;
+          margin-bottom: $mg-1;
+          i {
+            margin-right: 10px;
+          }
+        }
+        .footer-icon {
+          margin-top: $mg-1;
+          i {
+            color: $color-white-3;
+            transition: all 0.3s;
+            &:hover {
+              color: $color-dark-1;
+            }
+          }
+        }
+      }
+      .quick-links {
+        padding: 0px 20px;
+      }
+      .About {
+        padding: 0px 20px;
+      }
+      .newsletter {
+        padding: 0px 20px;
+        input {
+          border-radius: 50px;
+          // padding-left: 80px;
+          text-align: center;
+          height: 50px;
+          background-color: $color-pink;
+
+          &::placeholder {
+            color: $color-white-3;
+          }
+        }
+        .btn {
+          background-color: $color-white-3;
+          color: $color-dark-1;
+          border-radius: 50px;
+          margin-top: $mg-2;
+          height: 50px;
+          transition: all 0.3s;
+          &:hover {
+            background-color: $color-pink;
+            color: $color-white-3;
+            border: 1px solid $color-white-3;
+          }
+        }
+      }
+    }
+  }
+}
+@include responsive("medium-down") {
+  .footer {
+    background-image: url(/img/footer_background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 1100px;
+    position: relative;
+    margin-top: -135px;
+    .container {
+      top: 150px;
+      left: 0;
+      .row {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .footer-img {
+      .img-1 {
+        position: absolute;
+        top: -144px;
+        display: block;
+        z-index: -1;
+      }
+      .img-end {
+        display: none !important;
+      }
+    }
+  }
+}

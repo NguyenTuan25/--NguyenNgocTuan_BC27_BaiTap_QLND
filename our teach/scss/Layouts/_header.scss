@@ -1,0 +1,102 @@
+.header {
+  width: 100%;
+  // background-color: $color-white-3;
+  position: fixed;
+  //   left: 400px;
+  z-index: 30;
+  .container {
+    .content-header {
+      justify-content: space-around;
+      .logo-header {
+        margin-right: $mg-4;
+      }
+      .menuPort {
+        .nav1 {
+          a {
+            @include styleText($fs-2, $fw-2, $color-dark-1);
+            margin-right: $mg-2;
+            text-decoration: none;
+            transition: all 0.5s;
+            position: relative;
+            &::after {
+              content: "";
+
+              position: absolute;
+              z-index: 5;
+              bottom: -30px;
+              left: 40%;
+              height: 0px;
+              width: 0px;
+              border-radius: 50%;
+              background-color: #89005d;
+              transition: all 0.4s ease;
+            }
+            &:hover::after {
+              width: 10px;
+              height: 10px;
+            }
+            &:hover {
+              color: $color-pink;
+            }
+          }
+        }
+        .infor-menu {
+          .btn-phone {
+            margin-right: $mg-2;
+            .btn {
+              background-color: $color-pink !important;
+              border-radius: 20px;
+              color: $color-white-3;
+              transition: all 0.5s ease-in-out;
+
+              &:hover {
+                background-color: $color-white-3 !important;
+                color: $color-pink;
+                border: 1px solid $color-pink;
+              }
+            }
+          }
+          .icon-menu a {
+            margin-right: $mg-1;
+            @include styleText($fs-2, $fw-2, $color-dark-1);
+            transition: all 0.4s;
+            &:hover {
+              color: $color-pink;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.header-img {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+@include responsive("medium-down") {
+  .header {
+    position: fixed;
+    background-color: $color-white-3;
+    .content-header {
+      justify-content: flex-start !important;
+
+      .logo-header {
+        img {
+          height: 50px;
+        }
+      }
+      .infor-menu {
+        display: none;
+      }
+      .nav {
+        display: block !important;
+      }
+      .nav1 {
+        display: none;
+      }
+    }
+  }
+}
+

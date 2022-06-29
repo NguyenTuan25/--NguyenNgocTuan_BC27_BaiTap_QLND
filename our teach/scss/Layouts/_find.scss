@@ -1,0 +1,113 @@
+.find {
+  position: relative;
+  margin-top: $mg-5;
+  .container {
+    position: absolute;
+    justify-content: space-between;
+    top: -103px;
+    left: 300px;
+    h1 {
+      text-align: center;
+      font-weight: $fw-3;
+    }
+    .find-img {
+      z-index: 20;
+      img {
+        height: 500px;
+      }
+    }
+    .find-input {
+      padding: 45px 20px;
+      background-color: white;
+      box-shadow: 5px 10px 10px 5px;
+      z-index: 20;
+
+      .form-control {
+        padding-left: 40px;
+        padding-right: 0px;
+        border-radius: 50px;
+      }
+      .fa-solid {
+        color: $color-pink;
+      }
+      .input-name {
+        position: relative;
+        margin-right: 10px;
+        .fa-user {
+          position: absolute;
+          top: 11px;
+          left: 18px;
+        }
+      }
+      .input-email {
+        position: relative;
+        .fa-envelope {
+          position: absolute;
+          top: 11px;
+          left: 18px;
+        }
+      }
+      .input-2 {
+        position: relative;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        .fa-graduation-cap {
+          position: absolute;
+          top: 11px;
+          left: 18px;
+        }
+      }
+      .input-3 {
+        position: relative;
+        .fa-message {
+          position: absolute;
+          top: 11px;
+          left: 18px;
+        }
+      }
+      .btn {
+        margin-top: $mg-2;
+        border: 1px solid $color-pink;
+        background-color: $color-pink;
+        width: 200px;
+        height: 50px;
+        border-radius: 50px;
+        transition: all 0.3s linear;
+        &:hover {
+          background-color: $color-white-3;
+          color: $color-pink;
+        }
+      }
+    }
+  }
+}
+@include responsive("medium-down") {
+  .find {
+    margin-top: 1300px;
+    .container {
+      display: block !important;
+      left: 0;
+      top: -1200px;
+      .find-input {
+        margin-top: 100px;
+        z-index: 20;
+        .input-1 {
+          display: block !important;
+          .input-name {
+            margin-right: 0;
+            margin-bottom: 10px;
+          }
+        }
+        .btn {
+          display: block;
+          width: 100%;
+        }
+      }
+      img {
+        margin-right: 0;
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}
